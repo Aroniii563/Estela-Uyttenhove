@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <!doctype html>
@@ -17,18 +20,22 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 250, 100, 50;
+		--accent-light: 250, 0, 100;
+		--accent-dark: 150, 10, 0;
 		--accent-gradient: linear-gradient(
-			45deg,
+			90deg,
 			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
+			rgb(var(--accent-light)) 40%,
 			white 60%
 		);
 	}
