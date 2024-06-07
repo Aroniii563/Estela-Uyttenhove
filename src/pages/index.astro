@@ -1,9 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Main from "../style/index.css";
+import estela from "../img/Estela.png"
 ---
+
+<head>
+	<Main />
+</head>
 
 <Layout title="Estela Uyttenhove">
 	<main>
-		
+		<div class="one">
+			<h1>La mejor</h1>
+			<p>
+				Estela Uyttenhove Vazquez.
+			</p>
+		</div>
+		<div class="two">
+			<button><a href="/">Home</a></button>
+			<button><a href="/info">Info</a></button>
+			<button><a href="/galeria">Galeria</a></button>
+		</div>
+		<div class="img">
+			<img src={estela.src} alt="Estela">
+		</div>
 	</main>
 </Layout>

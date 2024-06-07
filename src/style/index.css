@@ -1,0 +1,142 @@
+main{
+    left: 0;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    width: 99.9%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.two{
+    grid-column: 1 / 2;
+    text-align: center;
+    margin-top: -40%;
+    margin-left: 17%;
+}
+
+.two button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.two button{
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 15%;
+    text-align: center;
+    margin-right: 10px;
+    transition: scale 0.3s ease-in-out;
+}
+
+.two button:hover{
+    scale: 1.2;
+}
+
+.img{
+    float: right;
+    grid: 2 / 3;
+}
+
+.img img{
+    width: 60%;
+    filter: drop-shadow(5px 5px 4px #c6190d);
+    margin-top: -59%;
+    margin-left: 20%;
+}
+
+.one{
+    text-align: center;
+    color: white;
+    margin-left: 20%;
+}
+
+.one h1{
+    font-size: 120px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 25px;
+    box-shadow: -5px -5px 5px white;
+    padding: 5px;
+}
+
+.one p{
+    font-size: 50px;
+}
+
+@media (width < 1600px){
+    .img img{
+        margin-top: -50%;
+    }
+
+    .one h1{
+        font-size: 90px;
+    }
+
+    .one p{
+        font-size: 30px;
+    }
+}
+
+@media (width < 1250px){
+    .one h1{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .one p{
+        font-size: 20px;
+    }
+
+    .two button a{
+        font-size: 12px;
+    }
+}
+
+@media (width < 750px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one h1{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .one p{
+        font-size: 20px;
+    }
+
+    .one{
+        margin: 100% 0 0 0;
+    }
+
+    .two{
+        margin: 30px 0 0 0;
+        display: flex;
+    }
+
+    .two button{
+        width: 45%;
+    }
+
+    .two button a{
+        font-size: 10px;
+    }
+
+    .img{
+        margin-top: 100px;
+    }
+
+    .img img{
+        width: 120%;
+    }
+}

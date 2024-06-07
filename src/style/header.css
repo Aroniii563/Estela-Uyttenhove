@@ -104,7 +104,6 @@ nav button:hover{
 @media (width < 650px){
     nav{
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
@@ -114,7 +113,7 @@ nav button:hover{
         font-size: 40px;
     }
     nav button{
-        margin-top: 5px;
+        margin: 5px 2px 0 2px;
     }
     nav button a{
         font-size: 15px;
